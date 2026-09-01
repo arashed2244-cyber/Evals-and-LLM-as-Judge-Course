@@ -1,0 +1,26 @@
+[
+  {
+    "id": "tc_001",
+    "input": "Explain API keys simply.",
+    "output": "An API key is like a digital passcode that lets your application talk to a server securely.",
+    "ground_truth": 1
+  },
+  {
+    "id": "tc_002",
+    "input": "Summarize the return policy.",
+    "output": "You can return items anytime. Just bring them back whenever you feel like it.",
+    "ground_truth": 0
+  },
+  {
+    "id": "tc_003",
+    "input": "Provide a Python list example.",
+    "output": "Here is a list: my_list = [1, 2, 3]",
+    "ground_truth": 1
+  },
+  {
+    "id": "tc_004",
+    "input": "What is 2 + 2?",
+    "output": "The answer is 5.",
+    "ground_truth": 0
+  }
+]
