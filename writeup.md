@@ -1,0 +1,9 @@
+# Course Design Writeup
+
+## 1. What Was Cut and Why
+
+Live LLM network calls were cut from student runtime and replaced with deterministic mock fixtures (`MOCK_JUDGE_RESPONSES`). This ensures build-along scripts run completely offline, execute instantly, and yield identical metric outputs during reviewer grading without requiring paid API keys or exposing network latency. Multi-dimensional evaluation rubrics (scoring tone, toxicity, and style simultaneously) were also cut in favor of a strict binary assertion flag ($1$ for Pass, $0$ for Fail). This simplification prevents cognitive overload and keeps the focus entirely on calculating execution-ready Precision and Recall metrics within the 90-minute course boundary. Finally, all web UI frameworks were eliminated to keep dependencies lightweight and focus on CLI output verification.
+
+## 2. Where the Course is Weakest
+
+The primary weakness of the course is dataset scale. To fit within the 90-minute completion window, the build-along uses a sample size of four test cases. In real-world production environments, evaluation datasets require at least 100 labeled cases to establish statistically significant Precision and Recall confidence intervals. Secondly, the course assumes static prompt construction for the LLM judge. It introduces prompt-based evaluation without covering advanced calibration workflows, such as few-shot prompt optimization or systematic iteration using frameworks like DSPy when judge precision falls below acceptable production thresholds. Lastly, position and verbosity biases inherent to LLM-as-a-judge patterns are noted conceptually but not fully stress-tested in the code.
