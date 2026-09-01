@@ -19,21 +19,20 @@ A 90-minute course and hands-on build-along designed to help AI engineers move b
 
 ```text
 .
-├── README.md           # Course overview and quickstart guide
-├── writeup.md          # Design decisions and course limitations
-├── requirements.txt    # Python environment requirements
-├── course/             # Lesson markdown files
+├── README.md
+├── course/
 │   ├── lesson_1.md
 │   └── lesson_2.md
-├── build/              # Learner build-along scripts
-│   ├── build_along_1/
-│   │   └── dataset_builder.py
-│   └── build_along_2/
-│       └── evaluator.py
-├── output/             # Generated execution outputs and benchmarks
-│   ├── test_cases.json
-│   ├── capstone_run.log
-│   └── course_manifest.json
-└── agent/              # Course orchestration agent scripts
-    ├── build_course.py
-    └── prompts.py
+├── build/
+│   ├── build_along_1
+|   |   └──dataset_builder.py
+│   └── build_along_2
+|       └──evaluator.py
+└── build-along/
+    ├── output/
+    |   ├──test_cases.json
+    |   └──capstone_run.log
+    ├── agent/
+    |   ├──build_course.py
+    |   └──prompts.py
+    └── writeup.md
